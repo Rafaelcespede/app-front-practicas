@@ -1,1 +1,49 @@
-<p>vista-solicitudes works!</p>
+<div id="fondo">
+    <div>
+        <app-cabecera></app-cabecera>
+    </div>
+    <div class="d-flex espacio-trabajo" id="wrapper">
+        <div>
+            <app-sidebar></app-sidebar>
+        </div>
+        <section id="page-content-wrapper">
+            <div class="container espacio-principal">
+                <div class="titulo">
+                    <div>Solicitudes para iniciar practicas pre profesionales</div>
+                </div>
+
+                <div class="list-h">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre Alumno</th>
+                                <th scope="col">Fecha de registro</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Visualizar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of persona">
+                                <!-- hola -->
+                                <th scope="row"></th>
+                                <td>{{p.nombres + ' ' + p.apellidos}}</td>
+                                <td>04/01/2022</td>
+                                <td>
+                                    <span class="material-icons-outlined">
+                                        done_all
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons-outlined">
+                                        visibility
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

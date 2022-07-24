@@ -1,1 +1,44 @@
-<p>asignar-tutor works!</p>
+<div id="fondo">
+    <div>
+        <app-cabecera></app-cabecera>
+    </div>
+    <div class="d-flex espacio-trabajo" id="wrapper">
+        <div>
+            <app-sidebar></app-sidebar>
+        </div>
+        <section id="page-content-wrapper">
+            <div class="container espacio-principal">
+                <div class="titulo">
+                    <div>Asignar tutor académico</div>
+                </div>
+
+                <div class="list-h">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre Alumno</th>
+                                <th scope="col">Fecha de registro</th>
+                                <th scope="col">Tutor academico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of persona">
+                                <!-- hola -->
+                                <th scope="row"></th>
+                                <td>{{p.nombres + ' ' + p.apellidos}}</td>
+                                <td>04/01/2022</td>
+                                <td>
+                                <select class="form-select" aria-label="Default select example" [(ngModel)]="tutor.idtutor" name="idtutor">
+                                    <option selected>Seleccionar tutor</option>
+                                    <option [value]="t.idtutor" *ngFor="let t of tutorlist">{{p.nombres}}</option>
+                                </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

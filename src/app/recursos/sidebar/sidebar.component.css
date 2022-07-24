@@ -16,6 +16,7 @@
   
   #sidebar-wrapper .list-group {
     width: 15rem;
+    border-radius: 10px;
   }
 
   #sidebar-wrapper .list-group a{
@@ -45,6 +46,9 @@
     }
   }
   @media (max-width: 767px) {
+    #sidebar-wrapper{
+      position: fixed;
+    }
     .show
     {
       margin-left: -15rem!important;

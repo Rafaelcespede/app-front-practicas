@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.espacio-trabajo{
+    padding-top: 70px;
+    position: relative;
+    height: 100vh;
+}
+
+
+.titulo {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.caja-anexo {
+    background-color: #cfcfcf;
+    padding: 14px;
+    padding-top: 10px;
+    width: 110%;
+}
+
+.formato-btn {
+    color: white;
+    width: 8rem;
+}
+
+.color-btn {
+    background-color: #3482cb;
+}
+
+.caja-titulo-desc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.icon-info {
+    text-align: center;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+#advertencia {
+    color: red;
+    font-size: small;
+}
+
+.icono {
+    margin-right: 0.5rem;
+}
+
+.documento {
+    width: 100%;
+    height: 83vh;
+}
+
+
+/* flex */
+.list-h {
+    /* listado horizontal */
+    display: flex;
+    flex-direction: row;
+}
+
+.list-v {
+    /* listado vertical */
+    display: flex;
+    flex-direction: column;
+}
+
+.centrar-h {
+    display: flex;
+    align-items: center;
+}
+
+.centrar-v {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar.close~.home-section {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+.home-content {
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.home-section .home-content .bx-menu,
+.home-section .home-content .text {
+    color: #11101d;
+    font-size: 35px;
+}
+
+.home-section .home-content .bx-menu {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.home-section .home-content .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+@media (max-width: 420px) {
+    .sidebar.close .nav-links li .sub-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+body {
+    overflow-x: hidden;
+  }
+  
+  #sidebar-wrapper {
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+    .show
+    {
+      margin-left: 0!important;
+    }
+    .hide
+    {
+      margin-left: -15rem!important;
+    }
+  }
+
+.espacio-principal{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.boton{
+    font-size: 15px;
+    color: white;
+    background-color:rgb(13, 56, 129);
+}

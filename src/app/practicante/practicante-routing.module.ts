@@ -6,6 +6,8 @@ import { VistaFormatosComponent } from './vista-formatos/vista-formatos.componen
 const routes: Routes = [
   {path: 'formatos', component: VistaFormatosComponent},
   {path: 'organizacion', component: RegistrarOrgComponent},
+  { path: '', component:VistaFormatosComponent},
+  { path: '**', component:VistaFormatosComponent}
 ];
 
 @NgModule({

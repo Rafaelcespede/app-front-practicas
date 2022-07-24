@@ -186,3 +186,13 @@ body {
     padding-left: 25px;
     padding-right: 25px;
 }
+
+.boton{
+    font-size: 15px;
+    color: white;
+    background-color:rgb(13, 56, 129);
+}
+
+#info{
+    cursor: pointer;
+}
