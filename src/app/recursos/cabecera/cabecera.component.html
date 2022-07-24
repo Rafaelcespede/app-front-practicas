@@ -1,7 +1,14 @@
 <nav class="navbar navbar-light fixed-top"
-        style="background-color:rgb(15, 92, 73); padding-right: 10px; width: 100%;">
-        <div class="d-flex">
-            <img  style="margin-right: 10px;" src="/assets/img/perfil.png" width="40" alt="">
+        style="background-color:rgb(13, 56, 129); padding-right: 10px;">
+        <div>
+            <a type="button" id="sidebarCollapse" class="btn btn-info" (click)="clickEvent()">
+                <span class="material-icons-outlined" style="font-size: 30px;">
+                    menu
+                </span>
+            </a>
+        </div>
+        <div>
+            <img  style="margin-right: 10px;" src="/assets/img/perfil.png" width="45" alt="">
             <span id="user" style="margin-right: 10px; margin-top: 5px;">Nombre del practicante</span>
         </div>
 </nav>

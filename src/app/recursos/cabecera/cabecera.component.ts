@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cabecera',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cabecera.component.css']
 })
 export class CabeceraComponent implements OnInit {
+  
+  @Output() status = new EventEmitter();
+  cambiador: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  //Sidebar open
+  clickEvent(){
+    this.status.emit(this.cambiador = !this.cambiador);     
+  }
+  
 }
