@@ -18,12 +18,12 @@
                                 <label class="form-label">Nombre del curso</label>
                                 <div class="casilla" type="button">
                                     <input [(ngModel)]="curso.nombre" name="nombre" type="text" class="form-control"
-                                        aria-label="Text input with checkbox">
+                                        aria-label="Text input with checkbox" #nombre>
                                 </div>
                             </div>
                             <div class="mb-2 casilla">
                                 <label class="form-label">Nombre del tutor</label>
-                                <select class="form-select" aria-label="Default select example" [(ngModel)]="curso.idtutor" name="idtutor">
+                                <select class="form-select" aria-label="Default select example" [(ngModel)]="curso.idtutor" name="idtutor" #idtutor>
                                     <option selected>Seleccionar tutor</option>
                                     <option [value]="t.idtutor" *ngFor="let t of tutorlist">{{t.apellidos}}</option>
                                 </select>
@@ -32,17 +32,17 @@
                                 <label class="form-label">Meses</label>
                                 <div class="casilla" type="button">
                                     <input [(ngModel)]="curso.meses" name="meses" type="text" class="form-control"
-                                        aria-label="Text input with checkbox">
+                                        aria-label="Text input with checkbox" #meses>
                                 </div>
                             </div>
                             <div class="mb-2 casilla">
                                 <label class="form-label">Fecha inicio</label>
-                                <input type="date" [(ngModel)]="curso.fecha_inicio" class="form-control" name="fecha_inicio" id="EMP_FACEBOOK">
+                                <input type="date" [(ngModel)]="curso.fecha_inicio" class="form-control" name="fecha_inicio" id="EMP_FACEBOOK" #fechainicio>
                                 
                             </div>
                             <div class="mb-2 casilla">
                                 <label class="form-label">Fecha fin</label>
-                                <input type="date" [(ngModel)]="curso.fecha_fin" class="form-control" name="fecha_fin" id="EMP_FACEBOOK">
+                                <input type="date" [(ngModel)]="curso.fecha_fin" class="form-control" name="fecha_fin" id="EMP_FACEBOOK" #fechafin>
                             </div>
                         </form>
                     </div>

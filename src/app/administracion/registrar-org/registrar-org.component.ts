@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { curso, tutor } from 'src/app/model/models';
 import { CursoService } from 'src/app/services/curso.service';
 import { PersonaService } from 'src/app/services/persona.service';
@@ -18,16 +18,33 @@ export class RegistrarOrgComponent implements OnInit {
   tutorlist: any[] = [];
   tutor: tutor = new tutor();
 
-  constructor(private cursoserv: CursoService, private personaserv: PersonaService, private tutorserv: TutorService) { }
+
+  @ViewChild('nombre') nombre:any;
+  @ViewChild('idtutor') idtutor:any;
+  @ViewChild('meses') meses:any;
+  @ViewChild('fechainicio') fechainicio:any;
+  @ViewChild('fechafin') fechafin:any;
+
+  constructor(private cursoserv: CursoService, private personaserv: PersonaService, private tutorserv: TutorService, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.listarTutor();
     this.listarPersona();
   }
 
+  limpiar(){
+    this.nombre.nativeElement.value = '';
+    this.idtutor.nativeElement.value = '';
+    this.meses.nativeElement.value = '';
+    this.fechainicio.nativeElement.value = '';
+    this.fechafin.nativeElement.value = '';
+  }
+
   registrarCurso(){
     this.cursoserv.save(this.curso).subscribe(
-
+      res=>{
+        this.limpiar();
+      }
     );
     Swal.fire('Completado', `El curso ha sido creado correctamente`, 'success')
   }
@@ -43,4 +60,6 @@ export class RegistrarOrgComponent implements OnInit {
       this.tutorlist = data;
     })
   }
+
+  
 }
