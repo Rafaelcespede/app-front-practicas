@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -8,7 +9,9 @@ import Swal from 'sweetalert2';
 })
 export class VistaFormatosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private storage: Storage) { 
+    this.images = [];
+  }
 
   ngOnInit(): void {
   }
@@ -33,5 +36,17 @@ export class VistaFormatosComponent implements OnInit {
     }
   }
   
+  persona: any[] = [];
+  images: string[];
+uploadImage($event: any) {
+    const file = $event.target.files[0];
+    console.log(file);
+
+    const imgRef = ref(this.storage, `images/${file.name}`);
+
+    uploadBytes(imgRef, file)
+      .then()
+      .catch(error => console.log(error));
+  }
 
 }

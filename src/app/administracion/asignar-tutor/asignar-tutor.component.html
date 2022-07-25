@@ -31,7 +31,7 @@
                                 <td>
                                 <select class="form-select" aria-label="Default select example" [(ngModel)]="tutor.idtutor" name="idtutor">
                                     <option selected>Seleccionar tutor</option>
-                                    <option [value]="t.idtutor" *ngFor="let t of tutorlist">{{p.nombres}}</option>
+                                    <option [value]="t.idtutor" *ngFor="let t of tutorlist">{{t.apellidos}}</option>
                                 </select>
                                 </td>
                             </tr>

@@ -1,0 +1,37 @@
+<div class="wallpaper" [style.background-image]="'url(assets/wallpaper.jpeg)'">
+    <form class="form">
+      <header class="formHeader">
+        <p class="formHeader__title" style="font-size: 1.5rem">
+          Practicas Pre Profesionales
+        </p>
+      </header>
+  
+      <div class="FormBody">
+        <label for="user" class="label"
+          >Usuario
+          <input
+            type="text"
+            name="user"
+            placeholder="Usuario"
+            class="input"
+            style="background-color: white"
+          />
+        </label>
+        <label for="user" class="label"
+          >Password
+          <input
+            type="password"
+            name="pass"
+            placeholder="Password"
+            class="input"
+          />
+        </label>
+      </div>
+      <button class="btn btn--primary" (click)="[login()]">
+        Iniciar Sesion
+      </button>
+      <div class="FormFooter">
+        <a class="FormFooter__link">¿Olvido su contraseña?</a>
+      </div>
+    </form>
+  </div>

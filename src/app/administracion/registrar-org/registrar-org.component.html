@@ -9,40 +9,40 @@
         <section id="page-content-wrapper">
             <div class="container espacio-principal">
                 <div class="titulo">
-                    <div>Registrar Organización</div>
+                    <div>Registrar Tutor Académico</div>
                 </div>
                 <div class="row">
                     <div class="col-7">
                         <form id="sec">
                             <div class="mb-2 casilla">
-                                <label class="form-label">Campo 1</label>
+                                <label class="form-label">Nombre del curso</label>
                                 <div class="casilla" type="button">
-                                    <input name="nombre" type="text" class="form-control"
+                                    <input [(ngModel)]="curso.nombre" name="nombre" type="text" class="form-control"
                                         aria-label="Text input with checkbox">
                                 </div>
                             </div>
                             <div class="mb-2 casilla">
-                                <label class="form-label">Campo 2</label>
-                                <div class="casilla" type="button">
-                                    <input name="nombre" type="text" class="form-control"
-                                        aria-label="Text input with checkbox">
-                                </div>
-                            </div>
-                            <div class="mb-2 casilla">
-                                <label class="form-label">Campo 3</label>
-                                <div class="casilla" type="button">
-                                    <input name="nombre" type="text" class="form-control"
-                                        aria-label="Text input with checkbox">
-                                </div>
-                            </div>
-                            <div class="mb-2 casilla">
-                                <label class="form-label">Campo 4</label>
-                                <select
-                                    name="idtipodocumento" class="form-select" aria-label="Default select example">
-                                    <option></option>
-                                    <option>
-                                    </option>
+                                <label class="form-label">Nombre del tutor</label>
+                                <select class="form-select" aria-label="Default select example" [(ngModel)]="curso.idtutor" name="idtutor">
+                                    <option selected>Seleccionar tutor</option>
+                                    <option [value]="t.idtutor" *ngFor="let t of tutorlist">{{t.apellidos}}</option>
                                 </select>
+                            </div>
+                            <div class="mb-2 casilla">
+                                <label class="form-label">Meses</label>
+                                <div class="casilla" type="button">
+                                    <input [(ngModel)]="curso.meses" name="meses" type="text" class="form-control"
+                                        aria-label="Text input with checkbox">
+                                </div>
+                            </div>
+                            <div class="mb-2 casilla">
+                                <label class="form-label">Fecha inicio</label>
+                                <input type="date" [(ngModel)]="curso.fecha_inicio" class="form-control" name="fecha_inicio" id="EMP_FACEBOOK">
+                                
+                            </div>
+                            <div class="mb-2 casilla">
+                                <label class="form-label">Fecha fin</label>
+                                <input type="date" [(ngModel)]="curso.fecha_fin" class="form-control" name="fecha_fin" id="EMP_FACEBOOK">
                             </div>
                         </form>
                     </div>
@@ -56,7 +56,7 @@
 
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-info boton">Enviar</button>
+                        <button class="btn btn-info boton" (click)="registrarCurso()">Enviar</button>
                     </div>
                 </div>
                 
